@@ -25,6 +25,7 @@ Route::group([
       'middleware' => 'auth:api'
     ], function() {
         Route::get('listUser', 'App\Http\Controllers\UserController@list');
+        Route::get('me/logout', 'App\Http\Controllers\AuthController@logout');
     });
 });
 
